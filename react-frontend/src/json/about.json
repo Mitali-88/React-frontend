@@ -1,0 +1,14 @@
+{
+    "greetings": {
+        "english": "Hello 👋",
+        "marathi": "नमस्कार 🙏",
+        "punjabi": "सत श्री अकाल 🙏",
+        "muslim": "आदाब 🤲"
+        
+    },
+    "eventManagement": {
+        "image": "",
+        "heading": "Event management",
+        "aboutContent": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error veritatis, asperiores accusamus, aut laudantium hic labore magni soluta harum accusantium, dolor facere provident. Explicabo aliquam, cumque est facilis nihil dolor non quam animi dicta, nobis nulla fugiat. Inventore, exercitationem similique eligendi esse voluptatum fugiat tempore modi ea eos, aspernatur asperiores!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error veritatis, asperiores accusamus, aut laudantium hic labore magni soluta harum accusantium, dolor facere provident. Explicabo aliquam, cumque est facilis nihil dolor "
+    }
+}
