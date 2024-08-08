@@ -9,4 +9,7 @@ used "npm create vite@latest" to setup react project
 2- tailwind setup for vite 
 https://tailwindcss.com/docs/guides/vite
 
-3- 
+3- for type writting effect used import Typewriter from "typewriter-effect";
+
+4- for carousel effect used react-slick and react-slidder
+issue:- default slick next and prev arrow is not visible added few styling to adjust it 

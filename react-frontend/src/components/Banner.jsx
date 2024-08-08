@@ -1,50 +1,65 @@
-// import React, { useState } from "react";
-// import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import React from "react";
+import Slider from "react-slick";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-// // Import images manually
-// import img1 from '../assets/images/specialGuest/image1.jpg';
-// import img2 from '../assets/images/specialGuest/image2.jpg';
-// import img3 from '../assets/images/specialGuest/image3.jpg';
-// // Add more imports as needed
+// Sample images array
+const images = [
+  "https://via.placeholder.com/600x300?text=Image+1",
+  "https://via.placeholder.com/600x300?text=Image+2",
+  "https://via.placeholder.com/600x300?text=Image+3",
+  "https://via.placeholder.com/600x300?text=Image+4",
+  "https://via.placeholder.com/600x300?text=Image+5",
+  "https://via.placeholder.com/600x300?text=Image+5"
+];
 
-// const images = [img1, img2, img3]; // Array of images
+// Custom arrow components
+const NextArrow = (props) => {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={`${className} absolute top-1/2 transform -translate-y-1/2 z-10`}
+      style={{ ...style, right: "10px", fontSize: "24px", color: "#333", cursor: "pointer", display: 'block' }}
+      onClick={onClick}
+    >
+      <FaChevronRight />
+    </div>
+  );
+};
 
-export const Banner = () => {
-//   const [currentIndex, setCurrentIndex] = useState(0);
+const PrevArrow = (props) => {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={`${className} absolute top-1/2 transform -translate-y-1/2 z-10`}
+      style={{ ...style, left: "10px", fontSize: "24px", color: "#333", cursor: "pointer", display: 'block' }}
+      onClick={onClick}
+    >
+      <FaChevronLeft />
+    </div>
+  );
+};
 
-//   const prevImage = () => {
-//     setCurrentIndex((prevIndex) =>
-//       prevIndex === 0 ? images.length - 1 : prevIndex - 1
-//     );
-//   };
+export const Slidder = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
 
-//   const nextImage = () => {
-//     setCurrentIndex((prevIndex) =>
-//       prevIndex === images.length - 1 ? 0 : prevIndex + 1
-//     );
-//   };
+  };
 
-//   return (
-//     <div className="relative w-full h-64 overflow-hidden">
-//       <div className="absolute inset-0 flex items-center justify-between px-4">
-//         <button
-//           onClick={prevImage}
-//           className="bg-white p-2 rounded-full shadow-md"
-//         >
-//           <FaChevronLeft className="w-6 h-6 text-gray-700" />
-//         </button>
-//         <button
-//           onClick={nextImage}
-//           className="bg-white p-2 rounded-full shadow-md"
-//         >
-//           <FaChevronRight className="w-6 h-6 text-gray-700" />
-//         </button>
-//       </div>
-//       <img
-//         src={images[currentIndex]}
-//         alt={`Banner Image ${currentIndex + 1}`}
-//         className="w-full h-full object-cover"
-//       />
-//     </div>
-//   );
+  return (
+    <div className="relative mt-5">
+      <Slider {...settings}>
+        {images.map((image, index) => (
+          <div key={index} className="p-2">
+            <img src={image} alt={`Slide ${index}`} className="w-full h-auto" />
+          </div>
+        ))}
+      </Slider>
+    </div>
+  );
 };
