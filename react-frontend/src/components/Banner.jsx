@@ -4,7 +4,12 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-// Sample images array
+
+// const imagestwo = require('../assets/images/specialGuest', false, /\.(png|jpe?g|svg)$/).default;
+// const imageList = imagestwo.keys().map(image => imagestwo(image));
+// console.log("images", imageList);
+
+// console.log("images", imagestwo)
 const images = [
   "https://via.placeholder.com/600x300?text=Image+1",
   "https://via.placeholder.com/600x300?text=Image+2",
